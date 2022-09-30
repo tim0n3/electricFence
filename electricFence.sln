@@ -3,9 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{874687F4-2F1D-4FD1-BF41-C4BF7737CB3B}"
+	ProjectSection(SolutionItems) = preProject
+		box.sh = box.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{895896CA-D947-4E86-B65C-27B73DFD87B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rules", "rules", "{EE0E64BD-0334-4089-A5C2-B9290E22D984}"
+	ProjectSection(SolutionItems) = preProject
+		sources\rules\filter_forward_router_ddos.sh = sources\rules\filter_forward_router_ddos.sh
+		sources\rules\filter_forward_router_normal.sh = sources\rules\filter_forward_router_normal.sh
+		sources\rules\filter_input_router_ddos.sh = sources\rules\filter_input_router_ddos.sh
+		sources\rules\filter_input_router_normal.sh = sources\rules\filter_input_router_normal.sh
+		sources\rules\filter_output_router_ddos.sh = sources\rules\filter_output_router_ddos.sh
+		sources\rules\filter_output_router_normal.sh = sources\rules\filter_output_router_normal.sh
+		sources\rules\mangle_qos_business.sh = sources\rules\mangle_qos_business.sh
+		sources\rules\mangle_qos_home.sh = sources\rules\mangle_qos_home.sh
+		sources\rules\nat_postrouting_natrules.sh = sources\rules\nat_postrouting_natrules.sh
+		sources\rules\nat_prerouting_portfowards.sh = sources\rules\nat_prerouting_portfowards.sh
+		sources\rules\policy.sh = sources\rules\policy.sh
+		sources\rules\raw_prerouting_ddos.sh = sources\rules\raw_prerouting_ddos.sh
+		sources\rules\raw_prerouting_normal.sh = sources\rules\raw_prerouting_normal.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{D0181304-4FA2-479B-945F-98DFC654C608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rules", "rules", "{A4F44355-8F90-456B-A06F-92B2DEE39F4F}"
+	ProjectSection(SolutionItems) = preProject
+		sources\template\rules\rules.v4 = sources\template\rules\rules.v4
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{895896CA-D947-4E86-B65C-27B73DFD87B9} = {874687F4-2F1D-4FD1-BF41-C4BF7737CB3B}
+		{EE0E64BD-0334-4089-A5C2-B9290E22D984} = {895896CA-D947-4E86-B65C-27B73DFD87B9}
+		{D0181304-4FA2-479B-945F-98DFC654C608} = {895896CA-D947-4E86-B65C-27B73DFD87B9}
+		{A4F44355-8F90-456B-A06F-92B2DEE39F4F} = {D0181304-4FA2-479B-945F-98DFC654C608}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D1ACB1C-C436-4CDC-A654-C579E63EA626}

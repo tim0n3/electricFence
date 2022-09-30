@@ -5,6 +5,11 @@ for i in ./sources/rules/*;
   do source $i
 done
 
+# debug check for sources import
+for files in ./sources/*;
+    do echo -e "Importing functions from: \n";ls -lsaFh --color=auto $files
+done
+
 box()
 {
 	# Get the options ;; run the functions
