@@ -1,14 +1,21 @@
 #!/bin/bash
-
+shopt -s globstar
 # initialize all functions                                 
-for -R i in ./sources/rules/*;
+for i in  **/*.sh;
   do source $i
 done
 
 # debug check for sources import
-for -R files in ./sources/*;
+for files in **/*.sh;
     do echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $files
 done
+
+#alternate method
+#find . -name "*.sh" -print0 | while read -d $'\0' file
+#do
+#    echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $file
+#    source $file
+#done
 
 box()
 {
