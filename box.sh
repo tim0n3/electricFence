@@ -8,27 +8,26 @@ done
 box()
 {
 	# Get the options ;; run the functions
-while getopts ":1|2|3|h" option; do
+while getopts ":1|2|3|4|h" option; do
    case $option in
-      h) # display Help
+      h) # display switches and options
          _help
          exit 0;;
-      1) # display device temps
-         _watch _thermals
+      1) # nat rules
+         # nat table function here
          exit 0;;
-      2) # purge logs in /var/log/*
-        _purge
+      2) # raw rules
+        # raw table function here
         exit 0;;
-      3) # catchall print help
-        _help
+      3) # mangle table
+        # mangle table rules here
         exit 0;;
-      4) 
-      sldjflsjf
-      exit0;;
-      *)
+      4)  # filter rules
+        # filter table rules here
+      exit 0;;
+      *) # catchall print help
       _help
       exit0;;
    esac
 done
-
 }
