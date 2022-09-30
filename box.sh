@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # initialize all functions                                 
-for i in ./sources/rules/*;
+for -R i in ./sources/rules/*;
   do source $i
 done
 
 # debug check for sources import
-for files in ./sources/*;
-    do echo -e "Importing functions from: \n";ls -lsaFh --color=auto $files
+for -R files in ./sources/*;
+    do echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $files
 done
 
 box()
