@@ -3,12 +3,13 @@ shopt -s globstar
 # initialize all functions                                 
 for i in  **/*.sh;
   do source $i
+  echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $files
 done
 
 # debug check for sources import
-for files in **/*.sh;
-    do echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $files
-done
+#for files in **/*.sh;
+#    do echo -e "Importing functions from: \n";ls -lsaFhR --color=auto $files
+#done
 
 #alternate method
 #find . -name "*.sh" -print0 | while read -d $'\0' file
@@ -43,3 +44,4 @@ while getopts ":1|2|3|4|h" option; do
    esac
 done
 }
+box;
