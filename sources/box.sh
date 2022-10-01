@@ -28,8 +28,9 @@ box()
                ;;
             *) # catchall print help
                _help
-               exit 0
+               #exit 0
                ;;
         esac
+        return
     done
 }

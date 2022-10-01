@@ -21,10 +21,9 @@ echo sources dir copied to $HOME
 cat << EOF >> ~/.bashrc
 
 # source all functions
-src=~/sources 
-if [ -d $src ]
+if [ -d ~/sources ]
 then
-    for f in $src/*.sh
+    for f in ~/sources/*.sh
     do
        test -x $f && source $f
     done
