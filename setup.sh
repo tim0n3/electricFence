@@ -1,10 +1,10 @@
 #!/bin/bash
 # initialize all functions
-shopt -s globstar                     
-for i in ./sources/*;
-  do source $i ;\
-  echo -e "Importing functions from: "; ls -CR --color=auto $i
-done
+#shopt -s globstar                     
+#for i in ./sources/*;
+ # do source $i ;\
+ # echo -e "Importing functions from: "; ls -CR --color=auto $i
+#done
 
 # debug check for sources import
 #for files in **/*.sh;
@@ -16,3 +16,12 @@ done
 ##do
  #   source $file
 #done
+
+src=./sources 
+if [ -d $src ]
+then
+    for f in $src/*.sh
+    do
+       test -x $f && source $f
+    done
+fi
