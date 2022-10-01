@@ -3,7 +3,7 @@
 shopt -s globstar                     
 for i in ./sources/*;
   do source $i ;\
-  echo -e "Importing functions from: \n"; ls -CR --color=auto $i
+  echo -e "Importing functions from: "; ls -CR --color=auto $i
 done
 
 # debug check for sources import
