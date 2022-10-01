@@ -7,7 +7,8 @@ box()
         case $option in
             h) # display switches and options
                _help
-               exit 0
+               #exit 0
+               return
                ;;
             1) # nat rules
                 # nat table function here
