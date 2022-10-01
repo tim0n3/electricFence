@@ -16,10 +16,12 @@
 ##do
  #   source $file
 #done
+cp ./sources ~/
+echo sources dir copied to $HOME 
 cat << EOF >> ~/.bashrc
 
 # source all functions
-src=./sources 
+src=~/sources 
 if [ -d $src ]
 then
     for f in $src/*.sh
