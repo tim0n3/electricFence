@@ -16,7 +16,7 @@
 ##do
  #   source $file
 #done
-cp ./sources ~/
+cp -r ./sources ~/
 echo sources dir copied to $HOME 
 cat << EOF >> ~/.bashrc
 
