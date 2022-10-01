@@ -43,4 +43,4 @@ box()
         esac
     done
 }
-box;
+box -h;
