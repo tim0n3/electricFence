@@ -7,7 +7,7 @@ box()
         case $option in
             h) # display switches and options
                _help
-               #exit 0
+               exit 0
                ;;
             1) # nat rules
                 # nat table function here
@@ -27,7 +27,7 @@ box()
                ;;
             *) # catchall print help
                _help
-               #exit 0
+               exit 0
                ;;
         esac
     done
