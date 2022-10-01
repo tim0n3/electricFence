@@ -16,7 +16,9 @@
 ##do
  #   source $file
 #done
+cat << EOF >> ~/.bashrc
 
+# source all functions
 src=./sources 
 if [ -d $src ]
 then
@@ -25,3 +27,4 @@ then
        test -x $f && source $f
     done
 fi
+EOF
